@@ -10,140 +10,97 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .tag.finalizado {color:#a9b9ca; border-color:#536477;}
+    .tag.progreso {color:#efca83; border-color:#8e713d;}
+    .boreal-alert {box-sizing:border-box;width:min(92vw,510px);max-height:90vh;overflow:auto;margin:auto;padding:30px 26px;background:#101b2c;color:#e8eef8;border:1px solid #c65662;border-radius:14px;text-align:center;box-shadow:0 0 45px #e74c552c;font-family:Inter,sans-serif;}
+    .boreal-alert::backdrop {background:rgba(2,8,19,.84);backdrop-filter:blur(7px);}
+    .boreal-alert .alert-icon {width:74px;height:74px;margin:0 auto 14px;color:#ff777e;animation:boreal-pulse 2s infinite;}
+    @keyframes boreal-pulse {50% {filter:drop-shadow(0 0 12px #ff646d);opacity:.65;}}
+    @media(prefers-reduced-motion:reduce){.boreal-alert .alert-icon{animation:none;}}
+    .alert-kicker,.alert-meta {font:12px/1.6 'IBM Plex Mono',monospace;letter-spacing:1px;color:#ff9299;}
+    .boreal-alert h2 {font-size:clamp(22px,5vw,29px);margin:12px 0;line-height:1.2;}
+    .boreal-alert p {font-size:14px;line-height:1.7;margin:16px 0;color:#d7e0ed;}
+    .alert-rule {border:0;border-top:1px solid #3c4658;margin:18px 0;}
+    .alert-confirm {width:100%;padding:14px 10px;border:1px solid #e66b76;background:#351f2c;color:#ffd4d7;border-radius:7px;font:600 12px Inter,sans-serif;letter-spacing:1px;cursor:pointer;}
+    .alert-confirm:hover,.alert-confirm:focus-visible {background:#59303e;}
+    .alert-reopen {background:none;border:0;color:#ff9299;text-decoration:underline;cursor:pointer;font:inherit;padding:0;}
+    .case-alert-note {border-left:3px solid #df6570;padding:12px 15px;margin:18px 0;background:#d9516212;color:#f3b0b6;font-size:14px;line-height:1.6;}
+    @media(max-width:480px){.boreal-alert{padding:22px 18px;}.file-row .tag{white-space:normal;text-align:right;}.system-bar{gap:10px;}}
+  </style>
 </head>
-
 <body>
   <div class="aurora aurora-one"></div>
   <div class="aurora aurora-two"></div>
-
   <header class="hero">
     <img src="boreal-banner.png" alt="BOREAL Operations Division" class="hero-image">
     <div class="hero-overlay"></div>
   </header>
-
   <main class="shell">
-
     <section class="system-bar">
-      <span>BOREAL SECURE NETWORK</span>
-      <span class="status-dot"><i></i> SYSTEM ONLINE</span>
+      <span>RED SEGURA BOREAL</span>
+      <span class="status-dot"><i></i> SISTEMA ACTIVO</span>
     </section>
-
     <section class="case-card">
-      <div class="eyebrow">RESTRICTED ACCESS</div>
-
+      <div class="eyebrow">ACCESO RESTRINGIDO</div>
       <div class="case-heading">
-        <div>
-          <p class="case-label">ACTIVE FILE</p>
-          <h1>CASE 2512-26</h1>
-        </div>
-        <div class="classification">LEVEL // 00</div>
+        <div><p class="case-label">EXPEDIENTE ACTIVO</p><h1>CASO 2512-26</h1></div>
+        <div class="classification">NIVEL // 03</div>
       </div>
-
       <div class="case-grid">
-        <div class="data-item">
-          <span>STATUS</span>
-          <strong>PRELIMINARY</strong>
-        </div>
-
-        <div class="data-item">
-          <span>THREAT LEVEL</span>
-          <strong>01 / 05</strong>
-        </div>
-
-        <div class="data-item">
-          <span>SUBJECT</span>
-          <strong>CLASSIFIED</strong>
-        </div>
-
-        <div class="data-item">
-          <span>LOCATION</span>
-          <strong>CLASSIFIED</strong>
-        </div>
-
-        <div class="data-item">
-          <span>INVESTIGATORS</span>
-          <strong>PENDING CLEARANCE</strong>
-        </div>
-
-        <div class="data-item">
-          <span>NEXT UPDATE</span>
-          <strong>CLASSIFIED</strong>
-        </div>
+        <div class="data-item"><span>ESTADO</span><strong>ALERTA ACTIVA</strong></div>
+        <div class="data-item"><span>NIVEL DE AMENAZA</span><strong>03 / 05</strong></div>
+        <div class="data-item"><span>SUJETO</span><strong>SANTA CLAUS</strong></div>
+        <div class="data-item"><span>UBICACIÓN</span><strong>DESCONOCIDA</strong></div>
+        <div class="data-item"><span>INVESTIGADORES</span><strong>AUTORIZADOS</strong></div>
+        <div class="data-item"><span>PRÓXIMA ACTUALIZACIÓN</span><strong>CLASIFICADA</strong></div>
       </div>
-
       <div class="briefing">
-        <div class="briefing-title">PRELIMINARY BRIEFING</div>
-        <p>
-          Se ha iniciado una investigación de carácter reservado.
-          En esta etapa, únicamente los candidatos seleccionados podrán
-          continuar con el proceso de evaluación.
-        </p>
-        <p>
-          La naturaleza de la operación permanecerá clasificada hasta nuevo aviso.
-        </p>
+        <div class="briefing-title">INFORME DE OPERACIONES</div>
+        <p>El proceso de incorporación de investigadores ha concluido. El Comité de Reconocimientos ha iniciado el proceso de votación y nominaciones correspondiente al cierre de operaciones de 2026.</p>
+        <p>Todos los investigadores deberán registrar sus propuestas hasta el 30 de noviembre de 2026.</p>
       </div>
-
-      <!-- Replace YOUR_GOOGLE_FORM_LINK_HERE with your real Google Forms link -->
-      <a class="access-button" href="https://docs.google.com/forms/d/e/1FAIpQLSesCKHqXXMW7HvrmqTHyV6yWC-L4GNdsexSbU4u7eIivUi7Bw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-        <span>ACCEDER AL EXPEDIENTE DE INGRESO</span>
-        <b>→</b>
+      <div class="case-alert-note"><strong>ALERTA PRIORITARIA</strong><br>Se ha perdido comunicación con Santa Claus. <button class="alert-reopen" id="reopen-alert" type="button">Consultar comunicado</button>.</div>
+      <a class="access-button" href="https://forms.gle/w7dfoZbGHByq57qP8" target="_blank" rel="noopener noreferrer">
+        <span>ACCEDER A RECONOCIMIENTOS INTERNOS</span><b>→</b>
       </a>
-
-      <p class="warning">
-        El acceso, reproducción o distribución no autorizada de información
-        asociada al Caso 2512-26 queda registrada por el sistema.
-      </p>
+      <p class="warning">La información asociada al Caso 2512-26 es de carácter reservado. Mantenga la confidencialidad de sus votos y nominaciones.</p>
     </section>
-
     <section class="locked-files">
-      <div class="section-title">
-        <span>CASE ARCHIVE</span>
-        <span>03 FILES</span>
-      </div>
-
-      <div class="file-row open-file">
-        <div>
-          <span class="file-code">FILE 001</span>
-          <strong>EXPEDIENTE DE INGRESO</strong>
-        </div>
-        <span class="tag available">AVAILABLE</span>
-      </div>
-
-      <div class="file-row">
-        <div>
-          <span class="file-code">FILE 002</span>
-          <strong>████████████████</strong>
-        </div>
-        <span class="tag">CLASSIFIED</span>
-      </div>
-
-      <div class="file-row">
-        <div>
-          <span class="file-code">FILE 003</span>
-          <strong>████████████████</strong>
-        </div>
-        <span class="tag">CLASSIFIED</span>
-      </div>
+      <div class="section-title"><span>ARCHIVO DE OPERACIONES</span><span>04 EXPEDIENTES</span></div>
+      <div class="file-row"><div><span class="file-code">EXPEDIENTE 001</span><strong>EXPEDIENTE DE INGRESO</strong></div><span class="tag finalizado">FINALIZADO</span></div>
+      <div class="file-row"><div><span class="file-code">EXPEDIENTE 002</span><strong>████████████████</strong><span class="file-code">INFORMACIÓN CLASIFICADA</span></div><span class="tag progreso">EN PROGRESO</span></div>
+      <div class="file-row open-file"><div><span class="file-code">EXPEDIENTE 003</span><strong>RECONOCIMIENTOS INTERNOS</strong></div><span class="tag available">DISPONIBLE</span></div>
+      <div class="file-row"><div><span class="file-code">EXPEDIENTE 004</span><strong>████████████████</strong></div><span class="tag">CLASIFICADO</span></div>
     </section>
-
     <section class="terminal">
-      <div class="terminal-head">
-        <span>SYSTEM LOG</span>
-        <span>SECURE CONNECTION</span>
-      </div>
-      <p><span>&gt;</span> Candidate clearance protocol initialized.</p>
-      <p><span>&gt;</span> Case information encrypted.</p>
-      <p><span>&gt;</span> Awaiting investigator profiles...</p>
+      <div class="terminal-head"><span>REGISTRO DEL SISTEMA</span><span>CONEXIÓN SEGURA</span></div>
+      <p><span>&gt;</span> Incorporación de investigadores completada.</p>
+      <p><span>&gt;</span> Expediente 002: acceso restringido.</p>
+      <p><span>&gt;</span> Protocolo de reconocimientos activado.</p>
+      <p style="color:#ff9299"><span>&gt;</span> ALERTA: comunicación con el Polo Norte interrumpida.</p>
       <p class="blink"><span>&gt;</span> _</p>
     </section>
-
   </main>
-
-  <footer>
-    <span>BOREAL // OPERATIONS DIVISION</span>
-    <span>INTERNAL SYSTEM // CASE 2512-26</span>
-  </footer>
-
+  <footer><span>BOREAL // DIVISIÓN DE OPERACIONES</span><span>SISTEMA INTERNO // CASO 2512-26</span></footer>
+  <dialog class="boreal-alert" id="boreal-alert" aria-labelledby="alert-title" aria-describedby="alert-description">
+    <svg class="alert-icon" viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="40" r="37" stroke="currentColor" opacity=".25"/><circle cx="40" cy="40" r="31" stroke="currentColor" opacity=".35"/><path d="M36 17Q40 10 44 17L66 57Q69 63 62 63H18Q11 63 14 57Z" stroke="currentColor" stroke-width="2"/><path d="M40 29V43" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="40" cy="52" r="2.5" fill="currentColor"/></svg>
+    <div class="alert-kicker">BOREAL // ALERTA PRIORITARIA</div>
+    <h2 id="alert-title">PÉRDIDA DE COMUNICACIÓN</h2>
+    <div class="alert-meta">CASO 2512-26 · NIVEL DE AMENAZA 03/05</div>
+    <hr class="alert-rule">
+    <div id="alert-description"><p>Nuestra estación de monitoreo del Polo Norte ha reportado una interrupción en las comunicaciones con Santa Claus.</p><p>Su paradero permanece desconocido. No se descarta una intervención deliberada.</p><p>Se solicita a todos los investigadores permanecer en estado de alerta hasta nuevo aviso.</p></div>
+    <button class="alert-confirm" id="confirm-alert" type="button" autofocus>CONFIRMAR RECEPCIÓN</button>
+  </dialog>
   <script src="script.js"></script>
+  <script>
+    (() => {
+      const alert = document.getElementById('boreal-alert');
+      const openAlert = () => { if (!alert.open) alert.showModal(); };
+      document.getElementById('confirm-alert').addEventListener('click', () => alert.close());
+      document.getElementById('reopen-alert').addEventListener('click', openAlert);
+      openAlert();
+    })();
+  </script>
 </body>
 </html>
